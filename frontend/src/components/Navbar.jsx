@@ -13,6 +13,18 @@ export const Navbar = ({ onDownloadClick }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const scrollToSection = (id) => {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
@@ -54,7 +66,7 @@ export const Navbar = ({ onDownloadClick }) => {
             onClick={onDownloadClick}
           >
             <Android size={16} className="btn-icon" />
-            <span>Download APK</span>
+            <span className="nav-cta-text">Download APK</span>
             <span className="btn-version-tag">v1.0</span>
           </a>
 
@@ -63,47 +75,55 @@ export const Navbar = ({ onDownloadClick }) => {
             className="mobile-toggle-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Backdrop & Drawer */}
       {mobileMenuOpen && (
-        <div className="mobile-drawer animate-fade-in">
-          <div className="mobile-drawer-links">
-            <button onClick={() => scrollToSection('features')} className="mobile-nav-link">
-              ⚖️ Core Features
-            </button>
-            <button onClick={() => scrollToSection('interactive-demo')} className="mobile-nav-link">
-              ⚡ Interactive Chamber Demo
-            </button>
-            <button onClick={() => scrollToSection('installation')} className="mobile-nav-link">
-              📲 3-Step APK Installation
-            </button>
-            <button onClick={() => scrollToSection('faq')} className="mobile-nav-link">
-              ❓ Frequently Asked Questions
-            </button>
-            <button onClick={() => scrollToSection('support')} className="mobile-nav-link">
-              📞 Advocate Support
-            </button>
-            <div className="mobile-drawer-actions">
-              <a
-                href="/layer-app.apk"
-                download="LayerApp.apk"
-                className="mobile-download-btn"
-                onClick={(e) => {
-                  setMobileMenuOpen(false);
-                  onDownloadClick(e);
-                }}
-              >
-                <Download size={18} />
-                <span>Download Android APK (35 MB)</span>
-              </a>
+        <>
+          <div 
+            className="mobile-drawer-backdrop animate-fade-in" 
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="mobile-drawer animate-slide-down">
+            <div className="mobile-drawer-links">
+              <button onClick={() => scrollToSection('features')} className="mobile-nav-link">
+                <span>⚖️ Core Features</span>
+              </button>
+              <button onClick={() => scrollToSection('interactive-demo')} className="mobile-nav-link">
+                <span>⚡ Interactive Chamber Demo</span>
+              </button>
+              <button onClick={() => scrollToSection('installation')} className="mobile-nav-link">
+                <span>📲 3-Step APK Installation</span>
+              </button>
+              <button onClick={() => scrollToSection('faq')} className="mobile-nav-link">
+                <span>❓ Frequently Asked Questions</span>
+              </button>
+              <button onClick={() => scrollToSection('support')} className="mobile-nav-link">
+                <span>📞 Advocate Support</span>
+              </button>
+              <div className="mobile-drawer-actions">
+                <a
+                  href="/layer-app.apk"
+                  download="LayerApp.apk"
+                  className="mobile-download-btn"
+                  onClick={(e) => {
+                    setMobileMenuOpen(false);
+                    onDownloadClick(e);
+                  }}
+                >
+                  <Download size={18} />
+                  <span>Download Android APK (35 MB)</span>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );

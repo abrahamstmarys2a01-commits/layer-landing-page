@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Scale, Download, Menu, X, Android, Sparkles } from './Icons';
+import { APK_CONFIG } from '../config/downloadConfig';
 
 export const Navbar = ({ onDownloadClick }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -60,14 +61,14 @@ export const Navbar = ({ onDownloadClick }) => {
         {/* Navbar Actions */}
         <div className="navbar-actions">
           <a
-            href="/app-release.apk"
-            download="LayerApp.apk"
+            href={APK_CONFIG.downloadUrl}
+            download={APK_CONFIG.fileName}
             className="nav-cta-btn"
             onClick={onDownloadClick}
           >
             <Android size={16} className="btn-icon" />
             <span className="nav-cta-text">Download APK</span>
-            <span className="btn-version-tag">v1.0</span>
+            <span className="btn-version-tag">{APK_CONFIG.version}</span>
           </a>
 
           {/* Mobile Menu Toggle */}
@@ -109,8 +110,8 @@ export const Navbar = ({ onDownloadClick }) => {
               </button>
               <div className="mobile-drawer-actions">
                 <a
-                  href="/app-release.apk"
-                  download="LayerApp.apk"
+                  href={APK_CONFIG.downloadUrl}
+                  download={APK_CONFIG.fileName}
                   className="mobile-download-btn"
                   onClick={(e) => {
                     setMobileMenuOpen(false);
@@ -118,7 +119,7 @@ export const Navbar = ({ onDownloadClick }) => {
                   }}
                 >
                   <Download size={18} />
-                  <span>Download Android APK (103 MB)</span>
+                  <span>Download Android APK ({APK_CONFIG.fileSize})</span>
                 </a>
               </div>
             </div>

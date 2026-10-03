@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download, CheckCircle, X, ShieldCheck } from './Icons';
+import { APK_CONFIG } from '../config/downloadConfig';
 
 export const DownloadToast = ({ isVisible, onClose }) => {
   if (!isVisible) return null;
@@ -13,11 +14,11 @@ export const DownloadToast = ({ isVisible, onClose }) => {
 
         <div className="toast-content">
           <div className="toast-title-row">
-            <h4>Downloading LayerApp.apk</h4>
-            <span className="toast-version-badge">v1.0.0</span>
+            <h4>Downloading {APK_CONFIG.fileName}</h4>
+            <span className="toast-version-badge">{APK_CONFIG.version}</span>
           </div>
           <p className="toast-desc">
-            Your ~103 MB download has started. Check notifications or Downloads folder to install.
+            Your {APK_CONFIG.fileSize} download has started. Check notifications or Downloads folder to install.
           </p>
           <div className="toast-meta">
             <ShieldCheck size={14} className="text-emerald" />

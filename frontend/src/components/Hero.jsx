@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download, Android, ShieldCheck, Sparkles, Scale, Clock, Users, Bell, FileText, CheckCircle } from './Icons';
+import { APK_CONFIG } from '../config/downloadConfig';
 
 export const Hero = ({ onDownloadClick }) => {
   const scrollToDemo = () => {
@@ -22,7 +23,7 @@ export const Hero = ({ onDownloadClick }) => {
           {/* Release Badge */}
           <div className="hero-badge">
             <span className="badge-pulse-dot"></span>
-            <span className="badge-text">v1.0.0 Android Release</span>
+            <span className="badge-text">{APK_CONFIG.version} Android Release</span>
             <span className="badge-divider">•</span>
             <span className="badge-highlight">Tailored for Indian & Global Advocates</span>
           </div>
@@ -44,8 +45,8 @@ export const Hero = ({ onDownloadClick }) => {
           <div className="hero-cta-wrapper">
             <div className="hero-cta-primary-box">
               <a
-                href="/app-release.apk"
-                download="LayerApp.apk"
+                href={APK_CONFIG.downloadUrl}
+                download={APK_CONFIG.fileName}
                 className="hero-download-btn"
                 onClick={onDownloadClick}
                 id="hero-primary-download-btn"
@@ -55,7 +56,7 @@ export const Hero = ({ onDownloadClick }) => {
                 </div>
                 <div className="btn-text-content">
                   <span className="btn-title">Download Android APK</span>
-                  <span className="btn-subtitle">Direct safe download • v1.0.0</span>
+                  <span className="btn-subtitle">Direct safe download • {APK_CONFIG.version}</span>
                 </div>
                 <div className="btn-shine"></div>
               </a>
@@ -69,7 +70,7 @@ export const Hero = ({ onDownloadClick }) => {
               </div>
               <span className="info-dot">•</span>
               <div className="info-badge-item">
-                <span className="file-size-tag">~103 MB</span>
+                <span className="file-size-tag">{APK_CONFIG.fileSize}</span>
               </div>
               <span className="info-dot">•</span>
               <div className="info-badge-item">

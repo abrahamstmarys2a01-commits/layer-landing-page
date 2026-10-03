@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, Smartphone, Download, ShieldCheck } from './Icons';
+import { APK_CONFIG } from '../config/downloadConfig';
 
 export const QRModal = ({ isOpen, onClose, onDownloadClick }) => {
   if (!isOpen) return null;
@@ -16,7 +17,7 @@ export const QRModal = ({ isOpen, onClose, onDownloadClick }) => {
             <Smartphone size={28} className="text-cyan" />
           </div>
           <h3 className="modal-title">Scan to Download on Android</h3>
-          <p className="modal-subtitle">Point your phone's camera at the QR code below to download <strong>LayerApp.apk</strong> directly.</p>
+          <p className="modal-subtitle">Point your phone's camera at the QR code below to download <strong>{APK_CONFIG.fileName}</strong> directly.</p>
         </div>
 
         {/* QR Code Presentation */}
@@ -98,8 +99,8 @@ export const QRModal = ({ isOpen, onClose, onDownloadClick }) => {
 
         <div className="modal-footer">
           <a
-            href="/app-release.apk"
-            download="LayerApp.apk"
+            href={APK_CONFIG.downloadUrl}
+            download={APK_CONFIG.fileName}
             className="modal-direct-dl-btn"
             onClick={(e) => {
               onDownloadClick(e);
@@ -107,7 +108,7 @@ export const QRModal = ({ isOpen, onClose, onDownloadClick }) => {
             }}
           >
             <Download size={16} />
-            <span>Download Directly on this Device (103 MB)</span>
+            <span>Download Directly on this Device ({APK_CONFIG.fileSize})</span>
           </a>
         </div>
       </div>

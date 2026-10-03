@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download, Smartphone, CheckCircle, ShieldCheck, Zap, ArrowRight, HelpCircle } from './Icons';
+import { APK_CONFIG } from '../config/downloadConfig';
 
 export const InstallationGuide = ({ onDownloadClick }) => {
   const steps = [
@@ -8,7 +9,7 @@ export const InstallationGuide = ({ onDownloadClick }) => {
       icon: <Download size={32} className="step-icon text-cyan" />,
       title: "Download Layer APK",
       badge: "Direct Download",
-      description: "Click the 'Download Android APK' button on this page. The official verified package `LayerApp.apk` (~103 MB) will save directly to your device downloads folder.",
+      description: `Click the 'Download Android APK' button on this page. The official verified package \`${APK_CONFIG.fileName}\` (${APK_CONFIG.fileSize}) will save directly to your device downloads folder.`,
       tip: "Takes ~10 seconds on regular 4G/5G/Wi-Fi."
     },
     {
@@ -41,7 +42,7 @@ export const InstallationGuide = ({ onDownloadClick }) => {
             How to Install <span className="gradient-text">Layer App</span> on Android
           </h2>
           <p className="section-subtitle">
-            Get up and running in less than 2 minutes. Follow these simple steps to install the latest v1.0.0 APK on any Android phone or tablet.
+            Get up and running in less than 2 minutes. Follow these simple steps to install the latest {APK_CONFIG.version} APK on any Android phone or tablet.
           </p>
         </div>
 
@@ -88,13 +89,13 @@ export const InstallationGuide = ({ onDownloadClick }) => {
           </div>
           <div className="banner-right">
             <a
-              href="/app-release.apk"
-              download="LayerApp.apk"
+              href={APK_CONFIG.downloadUrl}
+              download={APK_CONFIG.fileName}
               className="install-now-btn"
               onClick={onDownloadClick}
             >
               <Download size={18} />
-              <span>Download APK (103 MB)</span>
+              <span>Download APK ({APK_CONFIG.fileSize})</span>
             </a>
           </div>
         </div>

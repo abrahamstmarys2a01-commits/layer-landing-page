@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download, Android, ShieldCheck, Sparkles, Scale } from './Icons';
+import { APK_CONFIG } from '../config/downloadConfig';
 
 export const CTABanner = ({ onDownloadClick }) => {
   return (
@@ -27,15 +28,15 @@ export const CTABanner = ({ onDownloadClick }) => {
 
             <div className="cta-buttons-row">
               <a
-                href="/app-release.apk"
-                download="LayerApp.apk"
+                href={APK_CONFIG.downloadUrl}
+                download={APK_CONFIG.fileName}
                 className="cta-primary-download-btn"
                 onClick={onDownloadClick}
               >
                 <Download size={20} className="download-bounce-icon" />
                 <div className="btn-copy">
-                  <span className="btn-main">Download Android APK (v1.0.0)</span>
-                  <span className="btn-sub">Direct ~103 MB Package • 100% Free Trial</span>
+                  <span className="btn-main">Download Android APK ({APK_CONFIG.version})</span>
+                  <span className="btn-sub">Direct {APK_CONFIG.fileSize} Package • 100% Free Trial</span>
                 </div>
               </a>
             </div>

@@ -44,7 +44,7 @@ export const Hero = ({ onDownloadClick }) => {
           <div className="hero-cta-wrapper">
             <div className="hero-cta-primary-box">
               <a
-                href="/layer-app.apk"
+                href="/app-release.apk"
                 download="LayerApp.apk"
                 className="hero-download-btn"
                 onClick={onDownloadClick}
@@ -69,7 +69,7 @@ export const Hero = ({ onDownloadClick }) => {
               </div>
               <span className="info-dot">•</span>
               <div className="info-badge-item">
-                <span className="file-size-tag">~35 MB</span>
+                <span className="file-size-tag">~103 MB</span>
               </div>
               <span className="info-dot">•</span>
               <div className="info-badge-item">

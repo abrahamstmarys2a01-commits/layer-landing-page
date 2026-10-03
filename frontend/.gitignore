@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Android APK files (Host via GitHub Releases / CDN)
+*.apk
+*.aab
+public/*.apk

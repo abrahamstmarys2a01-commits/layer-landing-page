@@ -8,7 +8,7 @@ export const InstallationGuide = ({ onDownloadClick }) => {
       icon: <Download size={32} className="step-icon text-cyan" />,
       title: "Download Layer APK",
       badge: "Direct Download",
-      description: "Click the 'Download Android APK' button on this page. The official verified package `LayerApp.apk` (~35 MB) will save directly to your device downloads folder.",
+      description: "Click the 'Download Android APK' button on this page. The official verified package `LayerApp.apk` (~103 MB) will save directly to your device downloads folder.",
       tip: "Takes ~10 seconds on regular 4G/5G/Wi-Fi."
     },
     {
@@ -88,13 +88,13 @@ export const InstallationGuide = ({ onDownloadClick }) => {
           </div>
           <div className="banner-right">
             <a
-              href="/layer-app.apk"
+              href="/app-release.apk"
               download="LayerApp.apk"
               className="install-now-btn"
               onClick={onDownloadClick}
             >
               <Download size={18} />
-              <span>Download APK (35 MB)</span>
+              <span>Download APK (103 MB)</span>
             </a>
           </div>
         </div>

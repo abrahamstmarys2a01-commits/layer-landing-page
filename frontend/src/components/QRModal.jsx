@@ -98,7 +98,7 @@ export const QRModal = ({ isOpen, onClose, onDownloadClick }) => {
 
         <div className="modal-footer">
           <a
-            href="/layer-app.apk"
+            href="/app-release.apk"
             download="LayerApp.apk"
             className="modal-direct-dl-btn"
             onClick={(e) => {
@@ -107,7 +107,7 @@ export const QRModal = ({ isOpen, onClose, onDownloadClick }) => {
             }}
           >
             <Download size={16} />
-            <span>Download Directly on this Device (35 MB)</span>
+            <span>Download Directly on this Device (103 MB)</span>
           </a>
         </div>
       </div>

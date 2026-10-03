@@ -27,7 +27,7 @@ export const CTABanner = ({ onDownloadClick }) => {
 
             <div className="cta-buttons-row">
               <a
-                href="/layer-app.apk"
+                href="/app-release.apk"
                 download="LayerApp.apk"
                 className="cta-primary-download-btn"
                 onClick={onDownloadClick}
@@ -35,7 +35,7 @@ export const CTABanner = ({ onDownloadClick }) => {
                 <Download size={20} className="download-bounce-icon" />
                 <div className="btn-copy">
                   <span className="btn-main">Download Android APK (v1.0.0)</span>
-                  <span className="btn-sub">Direct ~35 MB Package • 100% Free Trial</span>
+                  <span className="btn-sub">Direct ~103 MB Package • 100% Free Trial</span>
                 </div>
               </a>
             </div>

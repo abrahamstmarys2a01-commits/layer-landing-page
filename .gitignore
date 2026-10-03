@@ -21,5 +21,8 @@ pnpm-debug.log*
 *.suo
 *.ntvs*
 *.njsproj
-*.sln
-*.sw?
+# Android APK binaries (Host large files via GitHub Releases / CDN)
+*.apk
+*.aab
+public/*.apk
+frontend/public/*.apk

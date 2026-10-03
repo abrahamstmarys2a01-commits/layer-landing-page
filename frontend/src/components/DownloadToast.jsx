@@ -17,7 +17,7 @@ export const DownloadToast = ({ isVisible, onClose }) => {
             <span className="toast-version-badge">v1.0.0</span>
           </div>
           <p className="toast-desc">
-            Your ~35 MB download has started. Check notifications or Downloads folder to install.
+            Your ~103 MB download has started. Check notifications or Downloads folder to install.
           </p>
           <div className="toast-meta">
             <ShieldCheck size={14} className="text-emerald" />

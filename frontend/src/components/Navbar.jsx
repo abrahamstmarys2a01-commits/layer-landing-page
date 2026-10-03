@@ -60,7 +60,7 @@ export const Navbar = ({ onDownloadClick }) => {
         {/* Navbar Actions */}
         <div className="navbar-actions">
           <a
-            href="/layer-app.apk"
+            href="/app-release.apk"
             download="LayerApp.apk"
             className="nav-cta-btn"
             onClick={onDownloadClick}
@@ -109,7 +109,7 @@ export const Navbar = ({ onDownloadClick }) => {
               </button>
               <div className="mobile-drawer-actions">
                 <a
-                  href="/layer-app.apk"
+                  href="/app-release.apk"
                   download="LayerApp.apk"
                   className="mobile-download-btn"
                   onClick={(e) => {
@@ -118,7 +118,7 @@ export const Navbar = ({ onDownloadClick }) => {
                   }}
                 >
                   <Download size={18} />
-                  <span>Download Android APK (35 MB)</span>
+                  <span>Download Android APK (103 MB)</span>
                 </a>
               </div>
             </div>

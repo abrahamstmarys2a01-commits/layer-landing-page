@@ -84,7 +84,7 @@ export const KeyFeatures = () => {
             <span className="gradient-text">Flawless Practice</span>
           </h2>
           <p className="section-subtitle">
-            Layer App is architected specifically around the nuances of court hierarchies, 
+            Vakil Grid is architected specifically around the nuances of court hierarchies, 
             cause list boards, advocate junior delegation, and legal accounting.
           </p>
         </div>

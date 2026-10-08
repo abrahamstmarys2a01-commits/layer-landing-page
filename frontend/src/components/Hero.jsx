@@ -124,11 +124,11 @@ export const Hero = ({ onDownloadClick }) => {
               </div>
             </div>
 
-            {/* Real Layer App Device Mockup */}
+            {/* Real Vakil Grid Device Mockup */}
             <div className="app-real-mockup-container">
               <img
                 src="/app-mockup.png"
-                alt="Layer App Mobile Dashboard"
+                alt="Vakil Grid Mobile Dashboard"
                 className="app-mockup-image"
               />
             </div>

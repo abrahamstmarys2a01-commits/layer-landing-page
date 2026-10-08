@@ -7,7 +7,7 @@ export const InstallationGuide = ({ onDownloadClick }) => {
     {
       stepNumber: "01",
       icon: <Download size={32} className="step-icon text-cyan" />,
-      title: "Download Layer APK",
+      title: "Download Vakil Grid APK",
       badge: "Direct Download",
       description: `Click the 'Download Android APK' button on this page. The official verified package \`${APK_CONFIG.fileName}\` (${APK_CONFIG.fileSize}) will save directly to your device downloads folder.`,
       tip: "Takes ~10 seconds on regular 4G/5G/Wi-Fi."
@@ -25,7 +25,7 @@ export const InstallationGuide = ({ onDownloadClick }) => {
       icon: <CheckCircle size={32} className="step-icon text-indigo" />,
       title: "Open & Setup Chamber",
       badge: "Ready to Practice",
-      description: "Tap 'Install', then launch Layer App. Enter your advocate profile, import your active cases or CNR numbers, and begin experiencing seamless case management.",
+      description: "Tap 'Install', then launch Vakil Grid. Enter your advocate profile, import your active cases or CNR numbers, and begin experiencing seamless case management.",
       tip: "You can delegate matters to juniors right after login!"
     }
   ];
@@ -39,7 +39,7 @@ export const InstallationGuide = ({ onDownloadClick }) => {
             <span>📲 SIMPLE 3-STEP SETUP</span>
           </div>
           <h2 className="section-title">
-            How to Install <span className="gradient-text">Layer App</span> on Android
+            How to Install <span className="gradient-text">Vakil Grid</span> on Android
           </h2>
           <p className="section-subtitle">
             Get up and running in less than 2 minutes. Follow these simple steps to install the latest {APK_CONFIG.version} APK on any Android phone or tablet.

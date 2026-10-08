@@ -39,7 +39,7 @@ export const ComparisonSection = () => {
           </div>
           <h2 className="section-title">
             Traditional Paper Diary vs.{' '}
-            <span className="gradient-text">Layer App</span>
+            <span className="gradient-text">Vakil Grid</span>
           </h2>
           <p className="section-subtitle">
             See how upgrading your legal practice eliminates human error, saves 10+ hours a week, and boosts chamber efficiency.
@@ -54,7 +54,7 @@ export const ComparisonSection = () => {
                 <span className="badge-old">TRADITIONAL PRACTICE</span>
               </div>
               <div className="comp-col col-layer">
-                <span className="badge-layer">LAYER APP OS ✨</span>
+                <span className="badge-layer">VAKIL GRID OS ✨</span>
               </div>
             </div>
 

@@ -41,7 +41,7 @@ export function App() {
         {/* Interactive Chamber Simulation */}
         <InteractiveAppShowcase onDownloadClick={handleDownloadClick} />
 
-        {/* Diary vs Layer App Comparison */}
+        {/* Diary vs Vakil Grid Comparison */}
         <ComparisonSection />
 
         {/* 3-Step APK Installation Guide */}

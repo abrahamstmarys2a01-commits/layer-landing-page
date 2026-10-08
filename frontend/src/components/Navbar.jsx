@@ -40,11 +40,11 @@ export const Navbar = ({ onDownloadClick }) => {
         {/* Brand Logo */}
         <a href="#hero" className="navbar-brand" onClick={(e) => { e.preventDefault(); scrollToSection('hero'); }}>
           <div className="brand-icon-wrapper">
-            <img src="/layer-logo.png" alt="Layer App Logo" className="brand-logo-img" />
+            <img src="/layer-logo.png" alt="Vakil Grid Logo" className="brand-logo-img" />
             <div className="brand-glow-effect"></div>
           </div>
           <div className="brand-text-block">
-            <span className="brand-name">Layer <span className="brand-gradient">App</span></span>
+            <span className="brand-name">Vakil <span className="brand-gradient">Grid</span></span>
             <span className="brand-badge">FOR ADVOCATES</span>
           </div>
         </a>

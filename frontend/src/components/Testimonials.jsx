@@ -8,7 +8,7 @@ export const Testimonials = () => {
       role: "Senior Advocate, High Court of Karnataka",
       experience: "24 Years at Bar",
       rating: 5,
-      quote: "Layer App completely transformed our chamber. Earlier, 30 minutes every morning were wasted cross-referencing cause lists. Now, my juniors and I get instant notifications on our listed item numbers.",
+      quote: "Vakil Grid completely transformed our chamber. Earlier, 30 minutes every morning were wasted cross-referencing cause lists. Now, my juniors and I get instant notifications on our listed item numbers.",
       avatarBg: "#0ea5e9"
     },
     {
@@ -40,7 +40,7 @@ export const Testimonials = () => {
             Loved by Advocates Across <span className="gradient-text">High Courts &amp; Benches</span>
           </h2>
           <p className="section-subtitle">
-            From busy trial lawyers to high-volume multi-advocate law chambers, see why counsel rely on Layer App every single morning.
+            From busy trial lawyers to high-volume multi-advocate law chambers, see why counsel rely on Vakil Grid every single morning.
           </p>
         </div>
 

@@ -14,9 +14,9 @@ export const Footer = ({ onDownloadClick }) => {
           {/* Brand Info */}
           <div className="footer-brand-col">
             <div className="footer-logo-row">
-              <img src="/layer-logo.png" alt="Layer App Logo" className="footer-logo-img" />
+              <img src="/layer-logo.png" alt="Vakil Grid Logo" className="footer-logo-img" />
               <div className="brand-text-block">
-                <span className="brand-name">Layer <span className="brand-gradient">App</span></span>
+                <span className="brand-name">Vakil <span className="brand-gradient">Grid</span></span>
                 <span className="brand-badge">FOR ADVOCATES</span>
               </div>
             </div>
@@ -65,7 +65,7 @@ export const Footer = ({ onDownloadClick }) => {
             <p className="contact-text">Have questions or need assistance onboarding your chamber?</p>
             <div className="contact-email-card">
               <span className="email-label">Official Support Desk:</span>
-              <a href="mailto:support@layerapp.legal" className="email-link">support@layerapp.legal</a>
+              <a href="mailto:support@vakilgrid.legal" className="email-link">support@vakilgrid.legal</a>
             </div>
           </div>
         </div>
@@ -73,11 +73,11 @@ export const Footer = ({ onDownloadClick }) => {
         {/* Legal Disclaimer & Copyright */}
         <div className="footer-bottom-bar">
           <div className="disclaimer-note">
-            <strong>Bar Council &amp; Compliance Note:</strong> Layer App is a legal productivity and case management tool for advocates and law offices. It does not solicit legal work or provide legal advice to litigants.
+            <strong>Bar Council &amp; Compliance Note:</strong> Vakil Grid is a legal productivity and case management tool for advocates and law offices. It does not solicit legal work or provide legal advice to litigants.
           </div>
 
           <div className="copyright-row">
-            <p>© {new Date().getFullYear()} Layer App. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Vakil Grid. All rights reserved.</p>
             <div className="bottom-links">
               <span>Privacy Policy</span>
               <span className="divider">•</span>

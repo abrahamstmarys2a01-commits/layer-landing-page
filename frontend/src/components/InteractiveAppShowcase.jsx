@@ -20,10 +20,10 @@ export const InteractiveAppShowcase = ({ onDownloadClick }) => {
             <span>⚡ LIVE INTERACTIVE PREVIEW</span>
           </div>
           <h2 className="section-title">
-            Experience Layer App in <span className="gradient-text">Real-Time Action</span>
+            Experience Vakil Grid in <span className="gradient-text">Real-Time Action</span>
           </h2>
           <p className="section-subtitle">
-            Switch between different advocate workflows below to see how Layer App streamlines everyday court routines.
+            Switch between different advocate workflows below to see how Vakil Grid streamlines everyday court routines.
           </p>
         </div>
 
